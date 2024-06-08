@@ -1,0 +1,57 @@
+
+/*BARRA DE PESQUISA*/
+.div_barra_de_pesquisa {
+    padding: 10px;
+    background-color: #383737;
+    box-shadow: 4px 2px 15px #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .input_barra_de_pesquisa {
+    padding: 16px;
+    font-size: 17px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    color: black;
+    background-color: white;
+  }
+  
+  .botao_pesquisa {
+    background: none;
+    border: none;
+  }
+
+  .botao_filtro {
+    background: none;
+    border: none;
+  }
+  
+  .icone_pesquisa, .icone_filtro {
+    width: 35px;
+  }
+  
+  .icone_pesquisa:hover, .icone_filtro:hover {
+    transform: scale(1.2);
+  }
+  
+@media only screen and (min-width: 860px) { 
+  .div_barra_de_pesquisa {
+    padding: 15px;
+  }
+
+  .input_barra_de_pesquisa {
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    color: black;
+    background-color: white;
+  }
+
+  .icone_pesquisa, .icone_filtro {
+    width: 50px;
+  }
+}

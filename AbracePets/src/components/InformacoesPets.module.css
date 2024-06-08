@@ -1,0 +1,117 @@
+.foto_alterar {
+    width: 150px;
+    object-fit: cover;
+    height: 150px;
+    min-width: 150px;
+    border-radius: 10px;
+}
+
+.div_pet_alterar {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label_nome {
+    font-size: 20px;
+    width: 100%;
+    text-overflow: ellipsis;
+    font-weight: 800;
+}
+
+.botão_editar_informacoes_pets {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-weight: 800;
+    color: white;
+    border-radius: 5px;
+    background-color: #53893b;
+}
+
+.botão_editar_informações_pets:hover {
+    background-color: #2a4919;
+}
+
+.botão_editar_informações_pets:active {
+    background-color: #92b083;
+}
+
+.div_botão_editar_informações_pets {
+    margin: 20px;
+}
+
+.botão_excluir_pet {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-weight: 800;
+    color: white;
+    border-radius: 5px;
+    background-color: #994141;
+    margin-top: 10px;
+}
+
+.botão_excluir_pet:hover {
+    background-color: #651d1d;
+}
+
+.botão_excluir_pet:active {
+    background-color: #c37b7b;
+}
+
+.botão_confirmar_exclusao {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-weight: 800;
+    color: white;
+    border-radius: 5px;
+    background-color: #c58248;
+    margin-top: 10px;
+}
+
+
+.error_cards {
+    font-size: 20px;
+  }
+  
+  .botao_error {
+    padding: 10px;
+    font-size: 15px;
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+  }
+  
+  .icone_reload {
+    width: 40px;
+  }
+
+@media only screen and (min-width: 860px) {  
+    .div_pet_alterar {
+        background-color: rgba(0, 0, 0, 0.3);
+        margin: 20px;
+        display: inline-flex;
+        border-radius: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+        min-width: 550px;
+    }
+
+    .foto_alterar {
+        width: 200px;
+        object-fit: cover;
+        height: 200px;
+        min-width: 200px;
+        border-radius: 10px;
+    }
+}

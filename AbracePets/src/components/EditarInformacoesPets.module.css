@@ -1,0 +1,114 @@
+.input_informacoes_pet {
+    background-color: white;
+    font-size: 19px;
+    margin: 3px;
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    border: solid 3px transparent;
+}
+
+.input_informacoes_pet.edit_mode {
+    border: 3px solid #abecaf;
+}
+
+.botao_editar {
+    width: 30px;
+}
+
+.botao_editar:hover {
+    transform: scale(1.1);   
+}
+
+.botao_salvar_config {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    padding: 15px;
+    max-width: 200px;
+    min-width: 200px;
+    font-weight: 800;
+}
+
+.botao_salvar_config:active {
+    background: linear-gradient(to right,#CB6CE6, #6C8BE6);
+}
+
+.div_informacoes_usuario {
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.titulo_informacoes_pet {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.icone_voltar {
+    display: inline-flex;
+    width: 20px;
+} 
+
+.imagem_voltar {
+    width: 30px;
+    align-items: center;
+}
+
+.label_profile {
+    width: 100%;
+}
+
+.label_configuracoes {
+    font-size: 25px;
+    font-weight: 900;
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    display: flex;
+    flex-direction:row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 860px) { 
+
+    .input_informacoes_usuario {
+        max-width: 50%;
+        padding: 13px;
+    }
+
+    .titulo_informacoes_usuario {
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    .configuracoes_usuario {
+        align-items: center;
+    }
+
+    .label_configuracoes {
+        font-size: 35px;
+    }
+
+    .botao_editar {
+        width: 45px;
+    }
+
+    .botao_salvar_alterar_config {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .imagem_voltar {
+        width: 50px;
+        align-items: center;
+    }
+    
+}

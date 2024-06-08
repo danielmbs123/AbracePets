@@ -1,0 +1,32 @@
+.botao_voltar_ao_topo {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    z-index: 1000;
+}
+
+.botao_voltar_ao_topo button {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.flecha_cima {
+    width: 40px;
+}
+
+.botão_topo {
+    display: grid;
+}
+
+
+@media only screen and (min-width: 700px) {
+    .botao_voltar_ao_topo button {
+        padding: 10px;
+    }
+
+    .flecha_cima {
+        width: 50px;
+    }
+}

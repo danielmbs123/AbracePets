@@ -1,0 +1,390 @@
+/*--------------------HEADER-----------------------*/
+.header {
+    background-color: rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Kaushan Script';
+    src: url("../assets/fonts/KaushanScript-Regular.ttf") format("truetype");
+}
+
+.kaushan_font {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.logo {
+    width: 220px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.background_cachorro {
+    background-image: url('../../assets/images/background-pagina-inicial-roxo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 96vh;
+}
+
+.menuAberto {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #272424;
+}
+
+.menu_imagem {
+    width: 45px;
+}
+
+.menuBotão {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+}
+
+.button {
+    display: none;
+}
+
+.menuAberto .button {
+    padding: 25px;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.menuAberto .button:hover {
+    background-color: white;
+    color: #272424;
+}
+
+/*----------------------------MISSÃO-VISÃO-VALORES---------------------------*/
+
+.missao_visao_valores {
+    background-color: #272424;
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px 20px 0p;
+}
+
+.m_s_v {
+    border-radius: 5px;
+    margin: 30px;
+    text-align: center;
+}
+
+.titulo_m_s_v {
+    background: linear-gradient(to right, #F3DCBF, #CB6CE6);
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px 10px 0px 0px;
+    text-shadow: 2px 2px 4px rgba(175, 166, 166, 0.5);
+}
+
+.texto_m_s_v {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: solid 3px;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+.texto_m_s_v_p {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: solid 3px;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+/*-----------------------PLANOS ASSINATURA-----------------------*/
+
+#titulo_membros {
+    background: linear-gradient(to right,#CB6CE6, #F3DCBF);
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+}
+
+.missao_visao_valores {
+    background-color: #272424;
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px 20px 0p;
+}
+
+/*--------------------------MEMBROS----------------------*/
+#titulo_membros {
+    background: linear-gradient(to right,#CB6CE6, #F3DCBF);
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+}
+
+#titulo_pagina_incicial {
+    background-color: #272424;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+}
+
+#membros_desenvolvedores {
+    background-color: #272424;
+    display: inline-block;
+}
+
+.ajustar_imagens_membros {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info_desenvolvedor {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.membros {
+    text-align: center;
+    border: solid 1px white ;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nome_desenvolvedor {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fala_do_desenvolvedor {
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-size: 16px;
+}
+
+/*----------------------------SUPORTE------------------------------*/
+#titulo_suporte {
+    background: linear-gradient(to right,#CB6CE6, #F3DCBF);
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+}
+
+.suporte {
+    background-color: #272424;
+    display: inline-block;
+    width: 100%;
+}
+
+.campo_suporte {
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.email_e_comentario {
+    margin: 20px;
+}
+
+.suporte_label {
+    background: linear-gradient(to right,#CB6CE6, #F3DCBF);
+    font-size: 15px;
+    padding: 5px;
+    text-align: left;
+    border-radius: 10px;
+    font-weight: 800;
+    display: grid;
+}
+
+.suporte_input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #272424;
+}
+
+.textarea_suporte {
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #272424;
+}
+
+.botão_email_e_comentario {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(107, 171, 107);
+    font-weight: 800;
+    color: white;
+    margin-top: 10px;
+}
+
+/*-----------------------------FOOTER----------------------------*/
+.footer_pagina_principal {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    text-align: center;
+    color: white;
+    padding: 15px;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.footer_text {
+    font-size: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px #272424;
+}
+
+.redes_sociais_links_footer {
+    margin: 10px;
+    text-decoration: none;
+}
+
+.tamanho_redes_sociais {
+    width: 30px;
+}
+
+.tamanho_redes_sociais:hover {
+    background: #272424;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 860px) {
+    .header {
+        padding: 25px;
+        background-color: rgba(0, 0, 0, 0.10);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .background_cachorro {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .menuAberto, .menuFechado {
+        display: none;
+    }
+
+    .menuBotão {
+        display: none;
+    }
+
+    .button {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        margin: 30px;
+        font-size: 18px;
+        text-align: center;
+        display: inline;
+        font-weight: 500;
+        border-radius: 5px;
+        border: solid 1px transparent;
+    }
+
+    .button:hover {
+        transform: scale(1.1);
+        border: solid 1px white;
+    }
+
+    .fala_do_desenvolvedor {
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    #membros_desenvolvedores{
+        background-color: #272424;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .membros {
+        text-align: center;
+        margin: 13px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 200px;
+    }
+
+    .missao_visao_valores {
+        display: flex;
+        justify-content: space-around;
+        align-items: justify;
+    }
+
+    .m_s_v {
+        border-radius: 5px;
+        margin: 40px;
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .texto_m_s_v {
+        font-size: 23px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        height: 450px;
+    }
+
+    .texto_m_s_v_p {
+        font-size: 23px;
+        height: 220px;
+    }
+
+    .beneficios {
+        margin: 8px;
+    }
+
+    .tamanho_redes_sociais {
+        width: 45px;
+    }
+
+    .footer_text {
+        font-size: 20px;
+    }
+}

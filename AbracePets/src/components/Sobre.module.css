@@ -1,0 +1,346 @@
+
+/*----------------------------MISSÃO-VISÃO-VALORES---------------------------*/
+.missao_visao_valores {
+    background-color: #272424;
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px 20px 0p;
+}
+
+.m_s_v {
+    border-radius: 5px;
+    margin: 30px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.m_s_v.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titulo_m_s_v {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px 10px 0px 0px;
+    text-shadow: 2px 2px 4px rgba(175, 166, 166, 0.5);
+}
+
+.texto_m_s_v {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: solid 3px;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+.texto_m_s_v_p {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: solid 3px;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+/*-----------------------PLANOS ASSINATURA-----------------------*/
+
+.titulo_membros {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+}
+
+.missao_visao_valores {
+    background-color: #272424;
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px 20px 0p;
+}
+
+/*--------------------------MEMBROS----------------------*/
+#titulo_membros_sobre_nos {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+}
+
+#membros_desenvolvedores {
+    background-color: #272424;
+    display: inline-block;
+}
+
+.ajustar_imagens_membros {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info_desenvolvedor {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.membros {
+    text-align: center;
+    border: solid 1px white ;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.membros.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nome_desenvolvedor {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fala_do_desenvolvedor {
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-size: 16px;
+}
+
+/*----------------------------SUPORTE------------------------------*/
+#titulo_suporte {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px;
+}
+
+.suporte {
+    background-color: #272424;
+    display: inline-block;
+    width: 100%;
+}
+
+.campo_suporte {
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.email_e_comentario {
+    margin: 20px;
+}
+
+.suporte_label {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    font-size: 15px;
+    padding: 5px;
+    text-align: left;
+    border-radius: 10px;
+    font-weight: 800;
+    display: grid;
+}
+
+.suporte_input {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #272424;
+}
+
+.textarea_suporte {
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #272424;
+}
+
+.nome_avaliação {
+    font-size: 20px;
+}
+
+.botão_email_e_comentario {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(107, 171, 107);
+    font-weight: 800;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/*-----------------------------FOOTER----------------------------*/
+.footer_pagina_principal {
+    background: linear-gradient(to right,#CB6CE6, #F3DCBF);
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+.footer_text {
+    font-size: 13px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px #272424;
+}
+
+.redes_sociais_links_footer {
+    margin: 10px;
+    text-decoration: none;
+}
+
+.tamanho_redes_sociais {
+    width: 30px;
+}
+
+.tamanho_redes_sociais:hover {
+    background: #272424;
+    border-radius: 5px;
+}
+
+
+@media only screen and (min-width: 860px) {
+    .header {
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.10);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .botão_email_e_comentario {
+        font-size: 18px;
+    }
+
+    .suporte_input,.textarea_suporte {
+        font-size: 18px;
+    }
+    
+    .nome_avaliação {
+        font-size: 20px;
+    }
+
+    .nome_desenvolvedor {
+        font-size: px;
+    }
+
+    .ajustar_imagens_membros {
+        width: 200px;
+        height: 200px;
+    }
+
+    .menuAberto, .menuFechado {
+        display: none;
+    }
+
+    .menuBotão {
+        display: none;
+    }
+
+    .button {
+        display: inline-block;
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .fala_do_desenvolvedor {
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    #membros_desenvolvedores{
+        background-color: #272424;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .membros {
+        text-align: center;
+        margin: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 200px;
+    }
+
+    .missao_visao_valores {
+        display: flex;
+        justify-content: space-around;
+        align-items: justify;
+    }
+
+    .m_s_v {
+        border-radius: 5px;
+        margin: 40px;
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .texto_m_s_v {
+        font-size: 23px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    .texto_m_s_v_p {
+        font-size: 23px;
+        height: 220px;
+    }
+
+    .beneficios {
+        margin: 8px;
+    }
+
+    .button {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        margin: 30px;
+        font-size: 15px;
+        text-align: center;
+        display: inline;
+        font-weight: 500;
+        border-radius: 5px;
+    }
+    
+    .button:hover {
+        transform: scale(1.1);
+        background: linear-gradient(to right, #CB6CE6,#F3DCBF);
+    }
+
+    .titulo_m_s_v {
+        font-size: 30px;
+    }
+
+}

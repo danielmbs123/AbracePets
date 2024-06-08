@@ -1,0 +1,294 @@
+/*HEADER*/
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+    background: linear-gradient(to right, #266ac2, #c36ddb);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    z-index: 1000;
+}
+
+#menu {
+    background: none;
+    border: none;
+}
+
+#menu:hover {
+    transform: scale(1.1);
+}
+
+.icone_menu {
+    width: 35px;
+}
+
+.botao_entrar,.botao_sair {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(226, 223, 218);
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.botao_entrar:hover , .botao_sair:hover {
+    background: #272424;
+    color: wheat;
+}
+
+.logoAbracePets_home {
+    width: 180px;
+    margin: 5px;
+    padding: 5px;
+}
+
+/*BARRA DE PESQUISA*/
+.div_barra_de_pesquisa {
+  padding: 10px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_barra_de_pesquisa {
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  background-color: white;
+}
+
+.botao_pesquisa {
+  margin-left: 10px;
+  background: none;
+  border: none;
+}
+
+.icone_pesquisa {
+  width: 35px;
+}
+
+.icone_pesquisa:hover {
+  transform: scale(1.1);
+}
+
+/*MAIN*/
+.conteudo_main {
+    padding-bottom: 80px;
+    height: 100%;
+    width: 100%;
+}
+
+/*Menu-Botão*/
+
+.menuAberto, .menuFechado {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #272424;
+  transition: all 0.3s ease;
+  border: solid 3px white;
+}
+
+.cadeado_perfis {
+  width: 30px;
+}
+
+.menuFechado {
+  display: none;
+}
+
+.menuImagem {
+  width: 35px;
+}
+
+.menuBotao {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  position: relative;
+  z-index: 1;
+  z-index: 1001;
+}
+
+.menuBotao:hover {
+  transform: scale(1.1);
+  background-color: #272424;
+}
+
+.menuBotao:active {
+  background: linear-gradient(to right, #d4bb86, #CB6CE6);
+}
+
+.button {
+  display: none;
+}
+
+.menuAberto .button {
+  padding: 25px;
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+
+.menuAberto .button:hover {
+  background-color: white;
+  color: #272424;
+}
+
+/*FOOTER*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    border-radius: 15px 15px 0px 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1002;
+    box-shadow: 4px 2px 15px #000000;
+}
+
+.conteudo_footer {
+    display: none;
+    visibility: hidden;
+}
+
+.link_footer {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 12px;
+  }
+
+.logo_abracepets_footer {
+    display: none;
+}
+
+.ajustar_tamanho_icones {
+    width: 30px;
+}
+
+.menu_inferior {
+    margin: 5px;
+    text-align: center;
+    width: 80%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.menu_inferior:hover {
+    background: linear-gradient(to right, #6C8BE6, #CB6CE6);
+    box-shadow: 4px 2px 15px #828181;
+}
+
+.botao_mudar_tema {
+  background: none;
+  border: none;
+}
+
+.icone_ativado_claro, .icone_desativado_escuro {
+  border: none;
+}
+
+@media only screen and (min-width: 860px) { 
+  .footer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius:inherit;
+    box-shadow: none;
+  }
+
+  .ajustar_tamanho_icones {
+    width: 45px;
+  }
+
+  .menu_inferior {
+    margin: 5px;
+    text-align: center;
+    width: 80%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    border-radius: 5px;
+}
+
+  /* Content Container */
+  .contentContainer {
+    display: flex;
+    flex: 1;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .conteudo_footer {
+    display: block;
+    visibility: visible;
+    padding: 20px;
+    box-shadow: 4px 2px 15px #000000;
+    background-color: #383737;
+  }
+    
+  .logo_abracepets_footer {
+    display: block;
+  }
+
+  .footer {
+    position:relative;
+  }
+
+  .link_footer {
+    display: block;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logotipoabracepetssvg {
+    width: 190px;
+  }
+
+  .logoAbracePets_home {
+    width: 230px;
+  }
+
+  .botao_sair {
+    padding: 13px;
+    font-size: 17px;
+  }
+
+  .botao_entrar {
+    padding: 13px;
+    font-size: 17px;
+  }
+
+  .menuImagem {
+    width: 50px;
+  }
+}

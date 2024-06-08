@@ -1,0 +1,161 @@
+.div_adm {
+    color: white;
+    display: grid;
+    background-color: white;
+    background-size:cover;
+    background-position: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+th {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.icone_voltar_administrador {
+    width: 20px;
+}
+
+thead {
+    background-color: black;
+}
+
+.foto_pet_adm {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.label_administrador {
+    padding: 24px;
+    font-size: 25px;
+    font-weight: 800;
+    background-color: #272424;
+    background: linear-gradient(to right, #03133d, #4f7ee3,#819ddb);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_abracepets_adm {
+    width: 180px;
+}
+
+/*Tabela Usuarios - Adminstrador*/
+.tabela_crud_usuario {
+    width: 100%;
+}
+
+td {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.menu_administrador {
+    width: 150px;
+    background-color: #000000;
+    height: 90%;
+    z-index: 999;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+
+.titulo_usuario {
+    font-size: 25px;
+    font-weight: 700;
+    background: linear-gradient(to right, #03133d, #4f7ee3,#819ddb);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tabela_usuario {
+    padding: 20px;
+    margin: 30px;
+    border-radius: 20px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.adicionar_novo_usuario {
+    background: none;
+    border: none;
+}
+
+.botão_crud_excluir {
+    background: none;
+    border: none;
+}
+
+.botão_crud_editar {
+    background: none;
+    border: none;
+}
+
+.icones_crud_administrador {
+    width: 35px;
+}
+
+.icones_crud_administrador:hover {
+    transform: scale(1.3);
+}
+
+.barra_de_pesquisa_usuario {
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    background: none;
+    border-radius: 10px;
+    color: white;
+    border: solid 1px;
+    width: 100%;
+}
+
+.barra_de_pesquisa_usuario::placeholder {
+    color: white;
+}
+
+.label_numero_paginação {
+    padding: 10px;
+    margin: 10px;
+    background: none;
+    border-radius: 10px;
+    border: solid 1px white;
+}
+
+.label_numero_paginação option {
+    background-color: #000000;
+    border: solid 1px white;
+}
+
+.pesquisa_e_paginação {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numeros_paginação {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.numeros:hover {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.numeros {    
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
