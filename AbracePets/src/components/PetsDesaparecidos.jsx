@@ -124,7 +124,7 @@ function PetsDesaparecido({ searchTerm }) {
   if (petsUsuario.length === 0) {
     return (
       <>
-      <label className={style.meus_pets}>Informar Desaparecimento</label>
+      <label className={style.meus_pets}>Mudar Status</label>
       <div className={style.div_sem_pets}>
         <p className={style.texto_sem_pets}>Você não possui pets cadastrados, cadastre para vê-los aqui.</p>
       </div>

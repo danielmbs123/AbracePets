@@ -104,7 +104,7 @@ function Cards({ searchTerm }) {
             <div className={style.div_alert_cards}>
               {missingPets.includes(pet.id) && (
                 <>
-                  <label>Desaparecido</label>
+                  <label>{pet.recentEvent}</label>
                   <img className={style.icon_alert_cards} src="../src/assets/icons/alerta.svg" alt="Alerta"/>
                 </>
               )}

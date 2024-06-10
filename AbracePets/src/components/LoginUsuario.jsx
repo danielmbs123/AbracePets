@@ -73,6 +73,7 @@ function LoginUsuario() {
           className={style.input_senha}
           placeholder='Digite sua senha'
           value={senha}
+          autoComplete="new-password"
           onChange={(e) => setSenha(e.target.value)}
         />
         <button 

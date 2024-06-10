@@ -7,7 +7,6 @@ import Carregamento from '../Carregamento';
 
 function CadastroPet() {
   const { id } = useParams(); // Pega o ID da URL
-  // eslint-disable-next-line no-unused-vars
   const [pet, setPet] = useState(null);
   const [status, setStatus] = useState('Desaparecido');
   const [dataOcorrido, setDataOcorrido] = useState('');
@@ -18,28 +17,55 @@ function CadastroPet() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchPet = async () => {
+    const fetchData = async () => {
       setLoading(true);
       setError(null);
       try {
-        const token = sessionStorage.getItem('token'); // Recupera o token do sessionStorage
-        const response = await axios.get(`https://abracepets-api.tccnapratica.com.br/pet/${id}`, {
-          headers: {
-            'Authorization': `Bearer ${token}`
-          }
-        });
-        if (response.status !== 200) {
-          throw new Error('Pet não encontrado');
+        const token = sessionStorage.getItem('token');
+        
+        // Busca o pet e seus eventos
+        const [petResponse, eventsResponse] = await Promise.all([
+          axios.get(`https://abracepets-api.tccnapratica.com.br/pet/${id}`, {
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          }),
+          axios.get(`https://abracepets-api.tccnapratica.com.br/pet/${id}/evento`, {
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          })
+        ]);
+
+        if (petResponse.status !== 200 || eventsResponse.status !== 200) {
+          throw new Error('Falha ao carregar os dados do pet ou seus eventos');
         }
-        setPet(response.data);
+
+        const petData = petResponse.data;
+        const eventsData = eventsResponse.data;
+
+        // Encontra o evento mais recente com o status "Desaparecido"
+        const ultimoDesaparecido = eventsData.reverse().find(evento => evento.status === 'Desaparecido');
+
+        // Define o estado com o status mais recente
+        if (ultimoDesaparecido) {
+          setStatus('Desaparecido');
+          setDataOcorrido(ultimoDesaparecido.data);
+          setLocalOcorrido(ultimoDesaparecido.local);
+          setDescricao(ultimoDesaparecido.descricao);
+        } else {
+          setStatus('Cadastrado'); // Defina um valor padrão se nenhum evento de desaparecimento for encontrado
+        }
+
+        setPet(petData);
       } catch (error) {
-        setError(error.message); // Trata erros
+        setError(error.message);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchPet();
+    fetchData();
   }, [id]);
 
   const cadastrarStatus = async (e) => {
@@ -76,7 +102,6 @@ function CadastroPet() {
       }
     }
   };
-  
 
   if (loading) {
     return <Carregamento/>;
@@ -104,6 +129,7 @@ function CadastroPet() {
             required
           >
             {/*0 = cadastrado / 1 = ParaAdoção / 2 = Adotado / 3 = Desaparecido/*/}
+            <option value="" selected >Selecione uma opção</option>
             <option value="1">Para Adoção</option>
             <option value="2">Adotado</option>
             <option value="3" selected>Desaparecido</option>
@@ -133,8 +159,12 @@ function CadastroPet() {
               </>
             )}
           {error && <p className={style.error}>{error}</p>}
-          <button className={style.botão_login} type="submit" disabled={loading}>
-            Adicionar Status
+          <button
+            className={style.botão_login}
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? 'Adicionando status...' : 'Adicionar Status'}
           </button>
         </form>
       </div>

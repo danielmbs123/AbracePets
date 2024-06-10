@@ -55,10 +55,10 @@ function PaginaInicial() {
             <p className={style.footer_text}>
                 ©Copyright - 2024 - AbracePets®
             </p>
-            <a href="#" className={style.redes_sociais_links_footer}>
+            <a href="" className={style.redes_sociais_links_footer}>
                 <img src={"../src/assets/icons/icone-facebook.svg"} alt={"Instagram"} className={style.tamanho_redes_sociais}></img>
             </a>
-            <a href="https://instagram.com.br" className={style.redes_sociais_links_footer}>
+            <a href="https://www.instagram.com/abrace_pets_tcc" className={style.redes_sociais_links_footer}>
                 <img src={"../src/assets/icons/icone-instagram.svg"} alt={"Instagram"} className={style.tamanho_redes_sociais}></img>
             </a>
             <a href="#" className={style.redes_sociais_links_footer}>
@@ -73,7 +73,7 @@ function PaginaInicial() {
             <a href="#" className={style.redes_sociais_links_footer}>
                 <img src={"../src/assets/icons/icone-tiktok.svg"} className={style.tamanho_redes_sociais}></img>
             </a>
-            <a href="#" className={style.redes_sociais_links_footer}>
+            <a href="https://github.com/danielmbs123/AbracePets" className={style.redes_sociais_links_footer}>
                 <img src={"../src/assets/icons/icone-github.svg"} className={style.tamanho_redes_sociais}></img>
             </a>
         </div>

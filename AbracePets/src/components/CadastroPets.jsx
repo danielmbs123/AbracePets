@@ -1,5 +1,5 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useRef  } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import style from '../components/CadastroPets.module.css';
 import axios from '../components/axiosConfig'; // Usando instância axios configurada
@@ -11,20 +11,9 @@ function CadastroPet() {
   const [sexo, setSexo] = useState('');
   const [raca, setRaca] = useState('');
   const [cor, setCor] = useState('');
-  const [loading, setLoading] = useState(true);
-  /*const [status, setStatus] = useState('');*/
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
-  // Função para converter arquivo para base64
-  const toBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = (error) => reject(error);
-    });
-  };
 
   const cadastrarPet = async (e) => {
     e.preventDefault();
@@ -40,8 +29,7 @@ function CadastroPet() {
         especie: especie,
         sexo: sexo,
         raca: raca,
-        cor: cor,
-        /*status: status*/
+        cor: cor
       };
 
       const token = sessionStorage.getItem('token'); // Recupera o token do sessionStorage
@@ -68,7 +56,19 @@ function CadastroPet() {
         setError('Erro ao cadastrar pet. Por favor, tente novamente.');
         console.error('Erro ao cadastrar pet:', error.message);
       }
+    } finally {
+      setLoading(false);
     }
+  };
+
+  // Função para converter arquivo para base64
+  const toBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
   };
 
   return (
@@ -111,6 +111,7 @@ function CadastroPet() {
             required
             onChange={(e) => setSexo(e.target.value)}
           >
+            <option value="" selected >Selecione uma opção</option>
             <option value={"0"} className={style.opcao_m_f}>Macho</option>
             <option value={"1"} className={style.opcao_m_f}>Fêmea</option>
           </select>
@@ -128,24 +129,14 @@ function CadastroPet() {
             required
             onChange={(e) => setCor(e.target.value)}
           />
-          {/*<select
-            className={style.input_select}
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
-          >
-            <option value={"0"} className={style.opcao_m_f}>Adotado</option>
-            <option value={"1"} className={style.opcao_m_f}>Para Adoção</option>
-          </select>
-          */}
           {error && <p className={style.error}>{error}</p>}
           <button 
             className={style.botão_login} 
             type="submit"
             disabled={loading} // Desativa o botão se estiver carregando
           >
-            {loading ? 'Cadastrando...': 'Cadastrar Pet'}
+            {loading ? 'Cadastrando...' : 'Cadastrar Pet'}
           </button>
-
         </form>
       </div>
     </div>

@@ -12,11 +12,13 @@ function CadastroUsuario() {
   const [senhaConfirmacao, setSenhaConfirmacao] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const cadastrarUsuario = async (e) => {
     e.preventDefault();
     setError('');
+    setLoading(true);
 
     if (senha !== senhaConfirmacao) {
       setError('As senhas não coincidem');
@@ -52,7 +54,9 @@ function CadastroUsuario() {
         } else {
           setError('Erro ao cadastrar usuário. Por favor, tente novamente.');
           console.error('Erro ao cadastrar usuário:', error.message);
-        }
+        } 
+      } finally {
+        setLoading(false);
       }
     };
   
@@ -99,6 +103,7 @@ function CadastroUsuario() {
               className={style.input_senha}
               placeholder='Digite sua senha'
               value={senha}
+              autoComplete="new-password"
               onChange={(e) => setSenha(e.target.value)}
             />
             <input
@@ -107,9 +112,19 @@ function CadastroUsuario() {
               className={style.input_senha}
               placeholder='Confirme sua senha'
               value={senhaConfirmacao}
+              autoComplete="new-password"
               onChange={(e) => setSenhaConfirmacao(e.target.value)}
             />
-              <button className={style.botão_login} type="submit">Cadastre-se</button>
+              <button 
+            className={style.botão_login} 
+            type="submit"
+            disabled={loading} // Desativa o botão se estiver carregando
+          >
+            {loading ? 'Cadastrando Usuário...' : 'Cadastrar-se'}
+          </button>
+            {error && (
+              <p className={style.error}>{error}</p>
+            )}
             <div>
               <label className={style.button}>Já possui conta?</label>
               <Link to="/login" className={style.button_cadastra} >Entrar</Link>
@@ -120,5 +135,5 @@ function CadastroUsuario() {
     );
   }
   
-  export default CadastroUsuario;
+export default CadastroUsuario;
   

@@ -125,6 +125,10 @@ function InformacoesPets() {
 
   const petsUsuario = pets.filter(pet => pet.usuarioId === user.id);
 
+  if (petsUsuario.length === 0) {
+    return <p>Nenhum pet cadastrado, cadastre para visualizá-los aqui.</p>;
+  }
+
   return (
     <>
       {editingPet ? (
