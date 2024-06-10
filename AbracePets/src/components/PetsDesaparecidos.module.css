@@ -23,7 +23,7 @@
     border: solid 1px white;
     margin: 15px;
     border-radius: 10px;
-    min-width: 400px;
+    min-width: 200px;
     justify-content: space-evenly;
     align-items: center;
     display: inline-block;
@@ -118,8 +118,8 @@
 
     .div_pets {
       display: inline-block;
-      min-width: 550px;
-      max-width: 550px;
+      min-width: 500px;
+      max-width: 500px;
     }
 
     .foto_pet {

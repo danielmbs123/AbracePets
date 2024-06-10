@@ -12,6 +12,8 @@ function InformacoesPets() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [editingPet, setEditingPet] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+  const [editSuccessMessage, setEditSuccessMessage] = useState('');
   const [confirmarExclusao, setConfirmarExclusao] = useState({}); // Estado para controlar a confirmação da exclusão por pet
 
   const token = sessionStorage.getItem('token');
@@ -112,6 +114,14 @@ function InformacoesPets() {
     return <Carregamento />;
   }
 
+  if (editSuccessMessage) {
+    return (
+      <div>
+        <p className={style.success_message}>{editSuccessMessage}</p>
+      </div>
+    );
+  }  
+
   if (error) {
     return (
       <div>
@@ -137,8 +147,10 @@ function InformacoesPets() {
         <div>
           {petsUsuario.map(pet => (
             <div key={pet.id} className={style.div_pet_alterar}>
-              <label className={style.label_nome}>{pet.nome}</label>
-              <img className={style.foto_alterar} src={pet.foto} alt={pet.nome} />
+              <div className={style.div_nome_e_foto}>
+                <label className={style.label_nome}>{pet.nome}</label>
+                <img className={style.foto_alterar} src={pet.foto} alt={pet.nome} />
+              </div>
               <div className={style.div_botão_editar_informações_pets}>
                 <button 
                   className={style.botão_editar_informacoes_pets} 
